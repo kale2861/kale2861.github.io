@@ -2,34 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sena Kaledzi | Data Science & Project Management Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sena Kaledzi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero"><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sena Kaledzi | Data Science & PM Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-content">
       <div class="logo">
-        <img src="profile.jpg" alt="Sena Kaledzi">
+        <img src="profile.jpg" alt="Sena Kaledzi" />
       </div>
       <div class="header-text">
-        <h1>Sena Kaledzi</h1>
+        <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
         <p class="subtitle">Data Scientist & Senior Project Manager</p>
         <nav class="social-links">
-          <a href="mailto:kale2861@gmail.com">Email</a> |
-          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/kale2861" target="_blank">GitHub</a>
+          <a href="mailto:kale2861@gmail.com" aria-label="Email">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" class="icon" /> kale2861@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank" aria-label="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon" /> LinkedIn
+          </a>
+          <a href="https://github.com/kale2861" target="_blank" aria-label="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon" /> GitHub
+          </a>
         </nav>
       </div>
       <button class="toggle-theme" aria-label="Toggle dark mode">🌙</button>
@@ -37,14 +33,108 @@
   </header>
 
   <main class="container">
-    <!-- About, Skills, Education, Experience, Projects, Contact sections here (unchanged) -->
-    <!-- ... same content as before ... -->
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm Sena Kaledzi, a passionate data scientist and senior project manager with 5+ years experience delivering
+        impactful data-driven solutions and managing high-performing Agile teams. I combine deep analytics expertise with
+        strategic leadership to help organizations innovate and thrive in a data-centric world.
+      </p>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section id="skills-tools">
+      <h2>Skills & Tools</h2>
+      <div class="skills-list">
+        <div>
+          <h3>Data Science & Analytics</h3>
+          <ul>
+            <li>Python <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" /></li>
+            <li>R <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="skill-icon" /></li>
+            <li>SQL <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" /></li>
+            <li>BigQuery</li>
+            <li>Power BI</li>
+            <li>ETL</li>
+            <li>REST APIs</li>
+            <li>Data Visualization</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools & Platforms</h3>
+          <ul>
+            <li>Azure DevOps</li>
+            <li>JIRA</li>
+            <li>Confluence</li>
+            <li>Asana</li>
+            <li>Monday.com</li>
+            <li>Git & GitHub <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" /></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <article>
+        <h3>Senior Project Manager — Follett Corporation</h3>
+        <span class="date-location">Dec 2022 - Oct 2024 | Remote</span>
+        <ul>
+          <li>Led global Agile teams modernizing infrastructure & legacy systems, improving scalability.</li>
+          <li>Managed enterprise-wide Oracle POS rollout with zero downtime across 6,000 registers.</li>
+          <li>Directed 3,600+ LMS integrations, boosting adoption rates and cutting student costs by 18%.</li>
+          <li>Redesigned EDI workflows, cutting onboarding time by 25% and improving data sync.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>IT Data Project Manager — LY Berditchev Co.</h3>
+        <span class="date-location">Feb 2022 - Dec 2022 | Ridgefield, NJ</span>
+        <ul>
+          <li>Built SQL-based ETL pipelines automating reporting, reducing manual analysis time by 40%.</li>
+          <li>Created Power BI dashboards to track sales, inventory, and P&L KPIs for exec decisions.</li>
+          <li>Managed inventory API integrations, cutting out-of-stock errors by 45%.</li>
+          <li>Established Agile PM frameworks enabling bi-weekly feature releases.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Project Manager — Aucera (formerly DialAmerica)</h3>
+        <span class="date-location">Apr 2019 - Mar 2022 | Mahwah, NJ</span>
+        <ul>
+          <li>Led Agile development of compliance tools ensuring GLBA, PCI, HIPAA adherence.</li>
+          <li>Launched AI-powered IVR system improving activation rates by 30% with predictive routing.</li>
+          <li>Used SQL for real-time marketing insights, increasing customer acquisition by 22%.</li>
+          <li>Managed incident response workflows, reducing issue recurrence by 35%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education-certifications">
+      <h2>Education & Certifications</h2>
+      <article>
+        <h3>New York Institute of Technology, New York, NY</h3>
+        <p>Master of Science in Data Science (Expected Spring 2026)</p>
+      </article>
+      <article>
+        <h3>SUNY Fredonia, Fredonia, NY</h3>
+        <p>Bachelor of Science — Mathematics & Physics</p>
+      </article>
+      <article>
+        <h3>Certifications</h3>
+        <ul>
+          <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
+          <li>Certified Scrum Master (CSM), Scrum Alliance</li>
+          <li>Project Management Professional (PMP), Project Management Institute</li>
+        </ul>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2024 Sena Kaledzi</p>
-    </div>
+    <p>&copy; 2024 Sena Kaledzi</p>
   </footer>
 
   <script>
@@ -54,153 +144,5 @@
       toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
   </script>
-</body>
-</html>
-
-    <div class="hero-content">
-      <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic">
-      <div class="hero-text">
-        <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
-        <p>Data Scientist & Senior Project Manager</p>
-        <nav class="social-links">
-          <a href="mailto:kale2861@gmail.com">📧 kale2861@gmail.com</a>
-          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon"> LinkedIn
-          </a>
-          <a href="https://github.com/kale2861" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon"> GitHub
-          </a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>Hello! I’m Sena Kaledzi, a dynamic Data Scientist and Senior Project Manager who blends technical expertise with strategic leadership. With a passion for transforming data into actionable insights, I excel at building and leading high-performing teams to deliver innovative, customer-focused solutions. I thrive at the intersection of analytics, technology, and business strategy, and am dedicated to driving measurable value through data science and agile project management.</p>
-    </section>
-
-    <section>
-      <h2>Skills & Tools</h2>
-      <div class="skills-logos">
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" class="icon">
-          Python
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/r.svg" alt="R" class="icon">
-          R
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt="SQL" class="icon">
-          SQL
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftpowerbi.svg" alt="Power BI" class="icon">
-          Power BI
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/azuredevops.svg" alt="Azure DevOps" class="icon">
-          Azure DevOps
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" alt="JIRA" class="icon">
-          JIRA
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/confluence.svg" alt="Confluence" class="icon">
-          Confluence
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/git.svg" alt="Git" class="icon">
-          Git & GitHub
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Work Experience</h2>
-      <div class="experience">
-        <h3>Senior Project Manager & Data Scientist</h3>
-        <p><strong>Company Name</strong> – City, State | Month Year – Present</p>
-        <ul>
-          <li>Led cross-functional teams to deliver data-driven technology solutions on time and within budget.</li>
-          <li>Developed machine learning pipelines to analyze customer data and improve decision-making.</li>
-          <li>Collaborated with stakeholders to align project goals with business strategy.</li>
-        </ul>
-      </div>
-      <!-- Add more roles if needed -->
-    </section>
-
-    <section>
-      <h2>Education & Certifications</h2>
-      <div class="education">
-        <h3>New York Institute of Technology, New York, NY</h3>
-        <p>Master of Science in Data Science (Expected Graduation: Spring 2026)</p>
-
-        <h3>SUNY Fredonia, Fredonia, NY</h3>
-        <p>Bachelor of Science in Mathematics-Physics</p>
-      </div>
-
-      <div class="certifications">
-        <h3>Certifications</h3>
-        <ul>
-          <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
-          <li>Certified Scrum Master (CSM), Scrum Alliance</li>
-          <li>Project Management Professional (PMP), PMI</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3><a href="https://github.com/kale2861/credit-card-fraud-detection" target="_blank">Credit Card Fraud Detection</a></h3>
-        <p>Developed an ML app using a Random Forest classifier on imbalanced data to detect fraudulent transactions. Features batch CSV uploads and interactive fraud trend visualizations.<br>
-        <strong>Tools:</strong> Python, scikit-learn, Streamlit, Pandas</p>
-      </div>
-
-      <div class="project">
-        <h3><a href="https://github.com/kale2861/sickle-cell-image-classifiern" target="_blank">Sickle Cell Image Classifier</a></h3>
-        <p>Built a binary AI model with MobileNetV2 and transfer learning to detect sickle cell disease from blood smear images, deployed via Streamlit.<br>
-        <strong>Tools:</strong> Python, TensorFlow/Keras, Streamlit</p>
-      </div>
-
-      <div class="project">
-        <h3><a href="https://github.com/kale2861/nba-clutch-dashboard" target="_blank">NBA Clutch Performance Dashboard</a></h3>
-        <p>Created an interactive Streamlit dashboard to analyze NBA clutch performance with shot logs, FG%, and player-specific stats.<br>
-        <strong>Tools:</strong> Python, NBA API, Streamlit</p>
-      </div>
-
-      <div class="project">
-        <h3><a href="https://github.com/kale2861/spotify-audio-feature-explorer" target="_blank">Spotify Top Tracks Analysis</a></h3>
-        <p>Analyzed top Spotify tracks using the Web API, exploring features like danceability, energy, and tempo with visualizations.<br>
-        <strong>Tools:</strong> Python, Spotipy, Google Colab, Matplotlib, Seaborn</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>If you’d like to get in touch, please fill out the form below or email me directly at <a href="mailto:kale2861@gmail.com">kale2861@gmail.com</a>.</p>
-      <form action="https://formspree.io/f/mrbkvpde" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="_replyto" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Sena Kaledzi</p>
-  </footer>
 </body>
 </html>
