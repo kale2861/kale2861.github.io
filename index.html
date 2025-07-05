@@ -4,145 +4,151 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sena Kaledzi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img.profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    nav.social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077b5;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+    nav.social-links a img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid #0077b5;
+      padding-bottom: 6px;
+      color: #0077b5;
+    }
+    ul.skills-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul.skills-list li {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 6px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: #444;
+      font-size: 14px;
+    }
+    .skill-icon {
+      height: 20px;
+      width: auto;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="logo">
-        <img src="profile.jpg" alt="Sena Kaledzi" />
-      </div>
-      <div class="header-text">
-        <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
-        <p class="subtitle">Data Scientist & Senior Project Manager</p>
-        <nav class="social-links">
-          <a href="mailto:kale2861@gmail.com" aria-label="Email">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" class="icon" /> kale2861@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank" aria-label="LinkedIn">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon" /> LinkedIn
-          </a>
-          <a href="https://github.com/kale2861" target="_blank" aria-label="GitHub">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon" /> GitHub
-          </a>
-        </nav>
-      </div>
-      <button class="toggle-theme" aria-label="Toggle dark mode">🌙</button>
-    </div>
+  <header>
+    <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic" />
+    <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
+    <p>Senior Project Manager & Data Scientist</p>
+    <nav class="social-links">
+      <a href="mailto:kale2861@gmail.com">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" /> kale2861@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /> LinkedIn
+      </a>
+      <a href="https://github.com/kale2861" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" /> GitHub
+      </a>
+    </nav>
   </header>
 
-  <main class="container">
-    <!-- About Me -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm Sena Kaledzi, a passionate data scientist and senior project manager with 5+ years experience delivering
-        impactful data-driven solutions and managing high-performing Agile teams. I combine deep analytics expertise with
-        strategic leadership to help organizations innovate and thrive in a data-centric world.
-      </p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Sena Kaledzi, a results-driven senior project manager and data scientist with a passion for
+      leveraging analytics and technology to drive business growth and operational excellence.
+      With experience leading cross-functional teams and deploying machine learning solutions, I
+      bring strategic vision and hands-on expertise to every project.
+    </p>
+  </section>
 
-    <!-- Skills & Tools -->
-    <section id="skills-tools">
-      <h2>Skills & Tools</h2>
-      <div class="skills-list">
-        <div>
-          <h3>Data Science & Analytics</h3>
-          <ul>
-            <li>Python <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" /></li>
-            <li>R <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="skill-icon" /></li>
-            <li>SQL <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" /></li>
-            <li>BigQuery</li>
-            <li>Power BI</li>
-            <li>ETL</li>
-            <li>REST APIs</li>
-            <li>Data Visualization</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Tools & Platforms</h3>
-          <ul>
-            <li>Azure DevOps</li>
-            <li>JIRA</li>
-            <li>Confluence</li>
-            <li>Asana</li>
-            <li>Monday.com</li>
-            <li>Git & GitHub <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" /></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work Experience -->
-    <section id="work-experience">
-      <h2>Work Experience</h2>
-      <article>
-        <h3>Senior Project Manager — Follett Corporation</h3>
-        <span class="date-location">Dec 2022 - Oct 2024 | Remote</span>
-        <ul>
-          <li>Led global Agile teams modernizing infrastructure & legacy systems, improving scalability.</li>
-          <li>Managed enterprise-wide Oracle POS rollout with zero downtime across 6,000 registers.</li>
-          <li>Directed 3,600+ LMS integrations, boosting adoption rates and cutting student costs by 18%.</li>
-          <li>Redesigned EDI workflows, cutting onboarding time by 25% and improving data sync.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>IT Data Project Manager — LY Berditchev Co.</h3>
-        <span class="date-location">Feb 2022 - Dec 2022 | Ridgefield, NJ</span>
-        <ul>
-          <li>Built SQL-based ETL pipelines automating reporting, reducing manual analysis time by 40%.</li>
-          <li>Created Power BI dashboards to track sales, inventory, and P&L KPIs for exec decisions.</li>
-          <li>Managed inventory API integrations, cutting out-of-stock errors by 45%.</li>
-          <li>Established Agile PM frameworks enabling bi-weekly feature releases.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Project Manager — Aucera (formerly DialAmerica)</h3>
-        <span class="date-location">Apr 2019 - Mar 2022 | Mahwah, NJ</span>
-        <ul>
-          <li>Led Agile development of compliance tools ensuring GLBA, PCI, HIPAA adherence.</li>
-          <li>Launched AI-powered IVR system improving activation rates by 30% with predictive routing.</li>
-          <li>Used SQL for real-time marketing insights, increasing customer acquisition by 22%.</li>
-          <li>Managed incident response workflows, reducing issue recurrence by 35%.</li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section id="education-certifications">
-      <h2>Education & Certifications</h2>
-      <article>
-        <h3>New York Institute of Technology, New York, NY</h3>
-        <p>Master of Science in Data Science (Expected Spring 2026)</p>
-      </article>
-      <article>
-        <h3>SUNY Fredonia, Fredonia, NY</h3>
-        <p>Bachelor of Science — Mathematics & Physics</p>
-      </article>
-      <article>
-        <h3>Certifications</h3>
-        <ul>
-          <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
-          <li>Certified Scrum Master (CSM), Scrum Alliance</li>
-          <li>Project Management Professional (PMP), Project Management Institute</li>
-        </ul>
-      </article>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2024 Sena Kaledzi</p>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.toggle-theme');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-  </script>
+  <section id="skills-tools">
+    <h2>Skills & Tools</h2>
+    <ul class="skills-list">
+      <li>
+        Python
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" />
+      </li>
+      <li>
+        R
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="skill-icon" />
+      </li>
+      <li>
+        SQL
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" />
+      </li>
+      <li>
+        BigQuery
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_BigQuery_Logo.svg" alt="BigQuery" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Power BI
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.svg" alt="Power BI" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Azure DevOps
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_Azure_DevOps.svg" alt="Azure DevOps" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        JIRA
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Atlassian_Jira_logo.svg" alt="JIRA" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Confluence
+        <img src="https://wac-cdn.atlassian.com/assets/img/favicons/confluence/favicon.png" alt="Confluence" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Asana
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Asana_logo.svg" alt="Asana" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Monday.com
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Monday.com_Logo.svg" alt="Monday.com" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Git & GitHub
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon" />
+      </li>
+    </ul>
+  </section>
 </body>
 </html>
