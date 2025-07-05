@@ -1,129 +1,187 @@
-:root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --subtitle-color: #777777;
-  --link-color: #007acc;
-  --header-footer-bg: #fafafa;
-  --border-color: #eeeeee;
+/* Reset & base */
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
+  font-family: 'Inter', sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+  font-size: 16px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
-  width: 90%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 0 1rem;
 }
+
+/* Variables for light/dark mode */
+
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+  --link-color: #007acc;
+  --header-footer-bg: #fafafa;
+  --border-color: #ddd;
+  --subtitle-color: #666;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --link-color: #4dabf7;
+  --header-footer-bg: #1f1f1f;
+  --border-color: #444;
+  --subtitle-color: #aaa;
+}
+
+/* Header */
 
 .site-header {
   background: var(--header-footer-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
+  padding: 1rem 0;
 }
 
-.header-content .logo img {
-  width: 120px;
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.header-text {
+  flex-grow: 1;
 }
 
 .header-text h1 {
-  margin: 0;
-  font-weight: 800;
-  font-size: 2rem;
+  margin: 0 0 0.2rem 0;
 }
 
 .subtitle {
-  font-weight: 400;
+  margin-top: 0;
   color: var(--subtitle-color);
+  font-weight: 500;
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-right: 1rem;
   color: var(--link-color);
-  text-decoration: none;
-  margin: 0 0.5rem;
-  font-weight: 600;
 }
 
-h2 {
-  margin-top: 3rem;
-  font-size: 1.5rem;
-  border-bottom: 2px solid var(--border-color);
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Toggle button */
+
+.toggle-theme {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* Sections */
+
+main section {
+  margin: 2rem 0;
+}
+
+main section h2 {
+  border-bottom: 3px solid var(--link-color);
   padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 
-.skills-logos {
+/* Skills & Tools */
+
+.skills-list {
   display: flex;
+  gap: 3rem;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 1rem;
 }
 
-.skills-logos img {
-  width: 40px;
-  height: 40px;
+.skills-list div {
+  flex: 1 1 300px;
 }
 
-.experience, .education, .projects {
-  margin-top: 2rem;
+.skills-list ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.experience h3, .projects h3 {
-  margin-bottom: 0.2rem;
+.skills-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.experience ul, .education ul {
-  padding-left: 1.2rem;
+.skill-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
-.project {
+/* Work Experience */
+
+#work-experience article {
   margin-bottom: 1.5rem;
 }
 
-.project a {
-  color: var(--link-color);
-  text-decoration: none;
+.date-location {
+  display: block;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--subtitle-color);
+  margin-bottom: 0.5rem;
 }
 
-.project a:hover {
-  text-decoration: underline;
+#work-experience ul {
+  margin: 0;
+  padding-left: 1.2rem;
 }
+
+/* Footer */
 
 .site-footer {
-  text-align: center;
-  padding: 2rem 0;
   background: var(--header-footer-bg);
+  color: var(--subtitle-color);
+  text-align: center;
+  padding: 1rem 0;
   border-top: 1px solid var(--border-color);
-}
-
-.toggle-theme {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--text-color);
-  transition: color 0.3s;
-}
-
-/* Dark mode overrides */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f0f0f0;
-  --subtitle-color: #bbbbbb;
-  --link-color: #4dabf7;
-  --header-footer-bg: #1f1f1f;
-  --border-color: #333333;
+  font-size: 0.9rem;
 }
