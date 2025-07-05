@@ -5,316 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sena Kaledzi | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Basic styles plus night mode toggle styles */
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body.night {
-      background: #121212;
-      color: #eee;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background: #0073b1; /* LinkedIn blue */
-      color: white;
-    }
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-right: 20px;
-      object-fit: cover;
-      border: 3px solid white;
-    }
-    .hero-text h1 {
-      margin: 0 0 6px;
-      font-size: 1.8rem;
-    }
-    .hero-text p {
-      margin: 0;
-      font-weight: 500;
-    }
-    nav.social-links {
-      margin-top: 12px;
-    }
-    nav.social-links a {
-      color: white;
-      text-decoration: none;
-      margin-right: 16px;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-    }
-    nav.social-links img.icon {
-      width: 20px;
-      height: 20px;
-      margin-right: 6px;
-      filter: invert(1);
-    }
-
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 15px;
-    }
-    h2 {
-      border-bottom: 2px solid #0073b1;
-      padding-bottom: 6px;
-      margin-bottom: 12px;
-      color: #0073b1;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-
-    ul.skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 0;
-      gap: 20px;
-    }
-    ul.skills-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #f0f0f0;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-weight: 600;
-      color: #333;
-    }
-    body.night ul.skills-list li {
-      background: #2a2a2a;
-      color: #ddd;
-    }
-    ul.skills-list img.skill-icon {
-      width: 24px;
-      height: 24px;
-    }
-
-    /* Work Experience and Education styles */
-    .work-experience, .education {
-      margin-top: 20px;
-    }
-    .job, .edu-item {
-      margin-bottom: 20px;
-    }
-    .job h3, .edu-item h3 {
-      margin: 0 0 4px;
-      color: #004a86;
-    }
-    .job p, .edu-item p {
-      margin: 2px 0;
-    }
-
-    /* Contact form */
-    form {
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    label {
-      font-weight: bold;
-    }
-    input[type="text"], input[type="email"], textarea {
-      padding: 8px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-    }
-    button {
-      max-width: 150px;
-      background: #0073b1;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #005582;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      border-top: 1px solid #ccc;
-      margin-top: 40px;
-      color: #666;
-    }
-
-    /* Night mode toggle button */
-    .toggle-night {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #0073b1;
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 50px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 0 8px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-    body.night .toggle-night {
-      background: #eee;
-      color: #0073b1;
-    }
-  </style>
 </head>
 <body>
-  <button class="toggle-night" aria-label="Toggle night mode">🌙</button>
-
-  <header>
-    <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic" />
-    <div class="hero-text">
-      <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
-      <p>Senior Project Manager & Data Science Graduate Student</p>
-      <nav class="social-links" aria-label="Social links">
-        <a href="mailto:kale2861@gmail.com" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="icon" /> kale2861@gmail.com
-        </a>
-        <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon" /> LinkedIn
-        </a>
-        <a href="https://github.com/kale2861" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon" /> GitHub
-        </a>
-      </nav>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="profile.jpg" alt="Sena Kaledzi" />
+      </div>
+      <div class="header-text">
+        <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
+        <p class="subtitle">Senior Project Manager & Data Science Graduate Student</p>
+        <nav class="social-links" aria-label="Social links">
+          <a href="mailto:kale2861@gmail.com"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="icon" /> kale2861@gmail.com</a>
+          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon" /> LinkedIn</a>
+          <a href="https://github.com/kale2861" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon" /> GitHub</a>
+        </nav>
+      </div>
+      <button class="toggle-theme" aria-label="Toggle dark mode">🌙</button>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>I'm a senior project manager with 7+ years of proven experience driving high-impact technology and data initiatives across eCommerce, retail, and marketing sectors. I excel at leading cross-functional teams, architecting robust data systems that enable smarter decision-making, and managing projects end-to-end — from initial concept through to seamless execution.</p>
-      <p>My expertise spans large-scale API integrations, designing automated reporting pipelines using SQL and BigQuery, and developing interactive Power BI dashboards that surface key business insights. I have also successfully implemented Agile frameworks that empower rapid growth and frequent, high-quality releases.</p>
-      <p>Combining a strong foundation in project delivery with deep technical problem-solving skills, I bring a practical, results-oriented mindset to every challenge — whether optimizing operations, advancing analytics capabilities, or launching innovative tools. Currently, I am expanding my data science expertise through graduate studies, enhancing my proficiency in Python, R, and machine learning to complement my project leadership.</p>
-      <p><strong>Key Strengths:</strong></p>
-      <ul>
-        <li>✔ Agile & Scrum Leadership</li>
-        <li>✔ Data Analytics & Visualization (Python, SQL, Power BI)</li>
-        <li>✔ Cloud & API Integration</li>
-        <li>✔ Project Governance & Risk Management</li>
-        <li>✔ Customer-Centric Design Thinking</li>
-      </ul>
+      <p>Hello! I'm Sena Kaledzi, a senior project manager and data scientist. I excel at leading cross-functional teams, building analytics pipelines, and delivering innovative solutions. Currently pursuing a Master's in Data Science to complement my leadership experience with advanced technical skills.</p>
     </section>
 
     <section id="skills">
       <h2>Skills & Tools</h2>
-      <ul class="skills-list" aria-label="Skills and Tools">
-        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" class="skill-icon" /> Python</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/r.svg" alt="R" class="skill-icon" /> R</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sql.svg" alt="SQL" class="skill-icon" /> SQL</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="skill-icon" /> Git & GitHub</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg" alt="Power BI" class="skill-icon" /> Power BI</li>
-      </ul>
-    </section>
-
-    <section id="work-experience" class="work-experience">
-      <h2>Work Experience</h2>
-
-      <div class="job">
-        <h3>Senior Project Manager, Follett Corporation</h3>
-        <p><em>Dec 2022 - Oct 2024, Remote</em></p>
-        <ul>
-          <li>Led global Agile teams to modernize infrastructure and legacy systems for Follett, enhancing operational efficiency and scalability.</li>
-          <li>Led an enterprise-wide Oracle POS rollout across 6,000 registers nationwide with zero downtime.</li>
-          <li>Directed 3,600+ LMS integrations via course material APIs, increasing adoption rates and reducing student costs by 18%.</li>
-          <li>Redesigned EDI workflows, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>IT Data Project Manager, LY Berditchev Co</h3>
-        <p><em>Feb 2022 - Dec 2022, Ridgefield, NJ</em></p>
-        <ul>
-          <li>Built and deployed SQL-based ETL pipelines using BigQuery, reducing manual analysis time by 40%.</li>
-          <li>Created Power BI dashboards to track KPIs including sales trends and P&L metrics.</li>
-          <li>Managed inventory API integrations across eCommerce platforms, reducing out-of-stock errors by 45%.</li>
-          <li>Established Agile PM frameworks supporting bi-weekly feature releases.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>Project Manager, Aucera (formerly DialAmerica)</h3>
-        <p><em>Apr 2019 - Mar 2022, Mahwah, NJ</em></p>
-        <ul>
-          <li>Served as primary liaison with Fortune 500 clients to drive marketing campaign success.</li>
-          <li>Led Agile development of compliance tools ensuring regulatory adherence (GLBA, PCI, HIPAA).</li>
-          <li>Launched AI-powered IVR system improving activation rates by 30%.</li>
-          <li>Used SQL for real-time marketing insights, improving customer acquisition by 22%.</li>
-          <li>Owned incident response workflows, reducing recurrence by 35%.</li>
-        </ul>
+      <div class="skills-list">
+        <div>
+          <h3>Data & Programming</h3>
+          <ul>
+            <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" class="skill-icon" /> Python</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/r.svg" alt="R" class="skill-icon" /> R</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sql.svg" alt="SQL" class="skill-icon" /> SQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Project Management</h3>
+          <ul>
+            <li>Scrum & Agile</li>
+            <li>JIRA & Confluence</li>
+            <li>Azure DevOps</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="education" class="education">
-      <h2>Education & Certifications</h2>
-
-      <div class="edu-item">
-        <h3>New York Institute of Technology, New York, NY</h3>
-        <p>Master of Science in Data Science (Expected Graduation: Spring 2026)</p>
-      </div>
-
-      <div class="edu-item">
-        <h3>SUNY Fredonia, Fredonia, NY</h3>
-        <p>Bachelor of Science, Mathematics-Physics</p>
-      </div>
-
-      <div class="edu-item">
-        <h3>Certifications</h3>
-        <ul>
-          <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
-          <li>Certified Scrum Master (CSM), Scrum Alliance</li>
-          <li>Project Management Professional (PMP), Project Management Institute</li>
-        </ul>
-      </div>
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3><a href="https://github.com/kale2861/credit-card-fraud-detection" target="_blank">Credit Card Fraud Detection</a></h3>
+        <p>Developed a machine learning app with a Random Forest classifier for fraud detection, including dynamic fraud trend visualizations.</p>
+      </article>
+      <article>
+        <h3><a href="https://github.com/kale2861/sickle-cell-image-classifiern" target="_blank">Sickle Cell Image Classifier</a></h3>
+        <p>Created an AI model using MobileNetV2 and transfer learning for binary image classification of sickle cell disease.</p>
+      </article>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>If you’d like to get in touch, please fill out the form below or email me directly at <a href="mailto:kale2861@gmail.com">kale2861@gmail.com</a>.</p>
+      <p>Feel free to get in touch via the form below or at <a href="mailto:kale2861@gmail.com">kale2861@gmail.com</a>.</p>
       <form action="https://formspree.io/f/mrbkvpde" method="POST">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required />
-        
         <label for="email">Your Email</label>
         <input type="email" id="email" name="_replyto" required />
-        
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-        
         <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2024 Sena Kaledzi</p>
   </footer>
 
   <script>
-    // Night mode toggle
-    const toggleBtn = document.querySelector('.toggle-night');
+    const toggleBtn = document.querySelector('.toggle-theme');
     const body = document.body;
 
-    // Load saved preference
-    if(localStorage.getItem('nightMode
+    if(localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if(body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
+</body>
+</html>
