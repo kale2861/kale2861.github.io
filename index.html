@@ -7,7 +7,56 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="hero"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sena Kaledzi | Data Science & PM Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="profile.jpg" alt="Sena Kaledzi">
+      </div>
+      <div class="header-text">
+        <h1>Sena Kaledzi</h1>
+        <p class="subtitle">Data Scientist & Senior Project Manager</p>
+        <nav class="social-links">
+          <a href="mailto:kale2861@gmail.com">Email</a> |
+          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/kale2861" target="_blank">GitHub</a>
+        </nav>
+      </div>
+      <button class="toggle-theme" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- About, Skills, Education, Experience, Projects, Contact sections here (unchanged) -->
+    <!-- ... same content as before ... -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2024 Sena Kaledzi</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.toggle-theme');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
+
     <div class="hero-content">
       <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic">
       <div class="hero-text">
