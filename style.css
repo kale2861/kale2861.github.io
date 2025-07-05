@@ -1,130 +1,128 @@
-/* Reset default browser styles */
+/* Reset and layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and font setup */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
+  background: #f2f2f2;
   color: #333;
   line-height: 1.6;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 20px 40px;
-}
-
-/* Header styling */
-header {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
   text-align: center;
-  margin-bottom: 50px;
 }
 
+/* Profile photo styling */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2980b9;
+  margin-bottom: 20px;
+}
+
+/* Header styles */
 header h1 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: #2c3e50;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
 }
 
 header p {
   font-size: 1.2rem;
   color: #555;
-  font-weight: 500;
-  margin-bottom: 1em;
+  margin-bottom: 20px;
 }
 
-/* Navigation links */
+/* Nav styles */
 nav a {
   color: #2980b9;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 10px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
   color: #1c5980;
-  text-decoration: underline;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(1);
 }
 
 /* Section headings */
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   color: #2c3e50;
   border-bottom: 3px solid #2980b9;
-  padding-bottom: 8px;
-  margin-bottom: 25px;
-  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin: 50px 0 20px;
 }
 
-/* About me paragraph */
+/* Paragraphs */
 section p {
   font-size: 1.1rem;
-  margin-bottom: 30px;
   color: #444;
+  margin-bottom: 30px;
 }
 
 /* Skills list */
 ul {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style: disc inside;
   margin-bottom: 40px;
+  text-align: left;
+  display: inline-block;
 }
 
-ul li {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-}
-
-/* Projects container */
+/* Projects */
 .project {
-  background-color: #fff;
-  padding: 18px 25px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
-}
-
-.project:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 20px 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 .project h3 {
-  margin-bottom: 8px;
-  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 .project h3 a {
   color: #34495e;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
 }
 
-.project h3 a:hover,
-.project h3 a:focus {
+.project h3 a:hover {
   color: #2980b9;
-  text-decoration: underline;
 }
 
 .project p {
   font-size: 1rem;
   color: #555;
-  line-height: 1.4;
 }
 
-/* Contact section */
+/* Contact form */
 form {
-  background-color: #fff;
+  background: #fff;
   padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
   max-width: 600px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto;
 }
 
 form label {
@@ -132,7 +130,6 @@ form label {
   margin-top: 20px;
   font-weight: 600;
   color: #2c3e50;
-  font-size: 1rem;
 }
 
 form input[type="text"],
@@ -145,18 +142,8 @@ form textarea {
   border-radius: 6px;
   font-size: 1rem;
   font-family: inherit;
-  resize: vertical;
-  transition: border-color 0.3s ease;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
-  border-color: #2980b9;
-  outline: none;
-}
-
-/* Submit button */
 form button {
   margin-top: 25px;
   background-color: #2980b9;
@@ -171,37 +158,13 @@ form button {
   width: 100%;
 }
 
-form button:hover,
-form button:focus {
+form button:hover {
   background-color: #1c5980;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
-  text-align: center;
+  margin-top: 50px;
   color: #777;
   font-size: 0.9rem;
-  padding-top: 15px;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
-}
-
-/* Responsive: smaller screens */
-@media (max-width: 600px) {
-  body {
-    padding: 10px 15px 30px;
-    max-width: 100%;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  form {
-    padding: 20px 15px;
-  }
 }
