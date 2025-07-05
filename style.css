@@ -45,7 +45,7 @@ body.dark-mode {
 .header-text h1 { margin: 0 0 0.2rem 0; }
 .subtitle { margin: 0; color: var(--subtitle-color); font-weight: 500; }
 .social-links a { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 1rem; color: var(--link-color); }
-.social-links .icon { width: 20px; height: 20px; filter: invert(1); }
+.social-links .icon { width: 20px; height: 20px; }
 
 /* Toggle button */
 .toggle-theme {
@@ -57,15 +57,11 @@ body.dark-mode {
 main section { margin: 2rem 0; }
 main section h2 { border-bottom: 3px solid var(--link-color); padding-bottom: 0.3rem; margin-bottom: 1rem; }
 
-/* Skills */
-.skills-list { display: flex; gap: 3rem; flex-wrap: wrap; }
-.skills-list div { flex: 1 1 300px; }
-.skills-list ul { list-style: none; padding-left: 0; }
-.skills-list li { margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-.skill-icon { width: 22px; height: 22px; object-fit: contain; }
-
-/* Projects */
-#projects article { margin-bottom: 1.5rem; }
+/* Work Experience */
+.job { margin-bottom: 1.5rem; }
+.job h3 { margin: 0; }
+.job p { margin: 0.2rem 0 0.5rem; }
+.job ul { margin: 0; padding-left: 1.2rem; }
 
 /* Contact form */
 form { max-width: 600px; display: flex; flex-direction: column; gap: 12px; }
