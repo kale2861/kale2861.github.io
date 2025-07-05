@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sena Kaledzi | Portfolio</title>
   <style>
+    /* Light Theme */
     body {
       font-family: Arial, sans-serif;
       max-width: 900px;
@@ -13,6 +14,7 @@
       line-height: 1.6;
       background: #f9f9f9;
       color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     header {
       text-align: center;
@@ -31,6 +33,7 @@
       color: #0077b5;
       font-weight: bold;
       vertical-align: middle;
+      transition: color 0.3s ease;
     }
     nav.social-links a img {
       width: 20px;
@@ -63,6 +66,7 @@
       font-weight: 600;
       color: #444;
       font-size: 14px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     .skill-icon {
       height: 20px;
@@ -105,9 +109,57 @@
     .certifications li {
       margin-bottom: 6px;
     }
+
+    /* Night Mode Styles */
+    body.night-mode {
+      background-color: #121212;
+      color: #ddd;
+    }
+    body.night-mode nav.social-links a {
+      color: #66aaff;
+    }
+    body.night-mode h2,
+    body.night-mode .job-title,
+    body.night-mode .education-degree {
+      color: #66aaff;
+    }
+    body.night-mode ul.skills-list li {
+      background-color: #222;
+      color: #ddd;
+      border-color: #444;
+    }
+    body.night-mode .job-company {
+      color: #bbb;
+    }
+    body.night-mode .job-dates {
+      color: #999;
+    }
+    body.night-mode .job-bullets {
+      color: #ccc;
+    }
+    /* Toggle Button */
+    #toggleNightMode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0077b5;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    #toggleNightMode:hover {
+      background-color: #005a80;
+    }
   </style>
 </head>
 <body>
+  <button id="toggleNightMode" aria-label="Toggle night mode">🌙 Night Mode</button>
+
   <header>
     <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic" />
     <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
@@ -149,34 +201,6 @@
       <li>
         SQL
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" />
-      </li>
-      <li>
-        BigQuery
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_BigQuery_Logo.svg" alt="BigQuery" class="skill-icon" style="height:20px;" />
-      </li>
-      <li>
-        Power BI
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.svg" alt="Power BI" class="skill-icon" style="height:20px;" />
-      </li>
-      <li>
-        Azure DevOps
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_Azure_DevOps.svg" alt="Azure DevOps" class="skill-icon" style="height:20px;" />
-      </li>
-      <li>
-        JIRA
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Atlassian_Jira_logo.svg" alt="JIRA" class="skill-icon" style="height:20px;" />
-      </li>
-      <li>
-        Confluence
-        <img src="https://wac-cdn.atlassian.com/assets/img/favicons/confluence/favicon.png" alt="Confluence" class="skill-icon" style="height:20px;" />
-      </li>
-      <li>
-        Asana
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Asana_logo.svg" alt="Asana" class="skill-icon" style="height:20px;" />
-      </li>
-      <li>
-        Monday.com
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Monday.com_Logo.svg" alt="Monday.com" class="skill-icon" style="height:20px;" />
       </li>
       <li>
         Git & GitHub
@@ -246,4 +270,22 @@
       <h3>Certifications</h3>
       <ul>
         <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
-        <li>Certified Scrum Master (CSM), Scrum Allian
+        <li>Certified Scrum Master (CSM), Scrum Alliance</li>
+        <li>Project Management Professional (PMP), Project Management Institute</li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleNightMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('night-mode');
+      if(document.body.classList.contains('night-mode')) {
+        toggleBtn.textContent = '☀️ Light Mode';
+      } else {
+        toggleBtn.textContent = '🌙 Night Mode';
+      }
+    });
+  </script>
+</body>
+</html>
