@@ -4,288 +4,317 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sena Kaledzi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Light Theme */
+    /* Basic styles plus night mode toggle styles */
+
     body {
       font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      background: #fff;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
     }
+
+    body.night {
+      background: #121212;
+      color: #eee;
+    }
+
     header {
-      text-align: center;
-      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: #0073b1; /* LinkedIn blue */
+      color: white;
     }
-    header img.profile-pic {
-      width: 140px;
-      height: 140px;
+    .profile-pic {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
+      margin-right: 20px;
       object-fit: cover;
-      margin-bottom: 15px;
+      border: 3px solid white;
+    }
+    .hero-text h1 {
+      margin: 0 0 6px;
+      font-size: 1.8rem;
+    }
+    .hero-text p {
+      margin: 0;
+      font-weight: 500;
+    }
+    nav.social-links {
+      margin-top: 12px;
     }
     nav.social-links a {
-      margin: 0 10px;
+      color: white;
       text-decoration: none;
-      color: #0077b5;
+      margin-right: 16px;
       font-weight: bold;
-      vertical-align: middle;
-      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
     }
-    nav.social-links a img {
+    nav.social-links img.icon {
       width: 20px;
       height: 20px;
-      vertical-align: middle;
       margin-right: 6px;
+      filter: invert(1);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    h2 {
+      border-bottom: 2px solid #0073b1;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      color: #0073b1;
     }
     section {
       margin-bottom: 40px;
     }
-    h2 {
-      border-bottom: 2px solid #0077b5;
-      padding-bottom: 6px;
-      color: #0077b5;
-    }
+
     ul.skills-list {
-      list-style: none;
-      padding-left: 0;
       display: flex;
       flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      gap: 20px;
     }
     ul.skills-list li {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 8px 12px;
-      margin: 6px;
       display: flex;
       align-items: center;
+      gap: 8px;
+      background: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 6px;
       font-weight: 600;
-      color: #444;
-      font-size: 14px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      color: #333;
     }
-    .skill-icon {
-      height: 20px;
-      width: auto;
-      margin-left: 8px;
-      vertical-align: middle;
+    body.night ul.skills-list li {
+      background: #2a2a2a;
+      color: #ddd;
     }
-    .job {
-      margin-bottom: 20px;
-    }
-    .job-title {
-      font-weight: 700;
-      font-size: 18px;
-      color: #0077b5;
-    }
-    .job-company {
-      font-style: italic;
-      color: #555;
-    }
-    .job-dates {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-    .job-bullets {
-      margin-left: 20px;
-      list-style-type: disc;
-      color: #444;
-    }
-    .education-item {
-      margin-bottom: 15px;
-    }
-    .education-degree {
-      font-weight: 700;
-      color: #0077b5;
-    }
-    .certifications {
-      margin-top: 10px;
-    }
-    .certifications li {
-      margin-bottom: 6px;
+    ul.skills-list img.skill-icon {
+      width: 24px;
+      height: 24px;
     }
 
-    /* Night Mode Styles */
-    body.night-mode {
-      background-color: #121212;
-      color: #ddd;
+    /* Work Experience and Education styles */
+    .work-experience, .education {
+      margin-top: 20px;
     }
-    body.night-mode nav.social-links a {
-      color: #66aaff;
+    .job, .edu-item {
+      margin-bottom: 20px;
     }
-    body.night-mode h2,
-    body.night-mode .job-title,
-    body.night-mode .education-degree {
-      color: #66aaff;
+    .job h3, .edu-item h3 {
+      margin: 0 0 4px;
+      color: #004a86;
     }
-    body.night-mode ul.skills-list li {
-      background-color: #222;
-      color: #ddd;
-      border-color: #444;
+    .job p, .edu-item p {
+      margin: 2px 0;
     }
-    body.night-mode .job-company {
-      color: #bbb;
+
+    /* Contact form */
+    form {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    body.night-mode .job-dates {
-      color: #999;
+    label {
+      font-weight: bold;
     }
-    body.night-mode .job-bullets {
-      color: #ccc;
+    input[type="text"], input[type="email"], textarea {
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
     }
-    /* Toggle Button */
-    #toggleNightMode {
+    button {
+      max-width: 150px;
+      background: #0073b1;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #005582;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+      color: #666;
+    }
+
+    /* Night mode toggle button */
+    .toggle-night {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: #0077b5;
-      border: none;
+      background: #0073b1;
       color: white;
-      padding: 10px 15px;
-      font-size: 14px;
-      border-radius: 6px;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
       z-index: 1000;
     }
-    #toggleNightMode:hover {
-      background-color: #005a80;
+    body.night .toggle-night {
+      background: #eee;
+      color: #0073b1;
     }
   </style>
 </head>
 <body>
-  <button id="toggleNightMode" aria-label="Toggle night mode">🌙 Night Mode</button>
+  <button class="toggle-night" aria-label="Toggle night mode">🌙</button>
 
   <header>
     <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic" />
-    <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
-    <p>Senior Project Manager & Data Scientist</p>
-    <nav class="social-links">
-      <a href="mailto:kale2861@gmail.com">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" /> kale2861@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /> LinkedIn
-      </a>
-      <a href="https://github.com/kale2861" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" /> GitHub
-      </a>
-    </nav>
+    <div class="hero-text">
+      <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
+      <p>Senior Project Manager & Data Science Graduate Student</p>
+      <nav class="social-links" aria-label="Social links">
+        <a href="mailto:kale2861@gmail.com" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="icon" /> kale2861@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon" /> LinkedIn
+        </a>
+        <a href="https://github.com/kale2861" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon" /> GitHub
+        </a>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm Sena Kaledzi, a results-driven senior project manager and data scientist with a passion for
-      leveraging analytics and technology to drive business growth and operational excellence.
-      With experience leading cross-functional teams and deploying machine learning solutions, I
-      bring strategic vision and hands-on expertise to every project.
-    </p>
-  </section>
-
-  <section id="skills-tools">
-    <h2>Skills & Tools</h2>
-    <ul class="skills-list">
-      <li>
-        Python
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" />
-      </li>
-      <li>
-        R
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="skill-icon" />
-      </li>
-      <li>
-        SQL
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" />
-      </li>
-      <li>
-        Git & GitHub
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon" />
-      </li>
-    </ul>
-  </section>
-
-  <section id="work-experience">
-    <h2>Work Experience</h2>
-
-    <div class="job">
-      <div class="job-title">Senior Project Manager</div>
-      <div class="job-company">Follett Corporation</div>
-      <div class="job-dates">Dec 2022 - Oct 2024, Remote</div>
-      <ul class="job-bullets">
-        <li>Led global Agile teams to modernize infrastructure and legacy systems for Follett, enhancing operational efficiency and scalability.</li>
-        <li>Led an enterprise-wide Oracle POS rollout across 6,000 registers nationwide, ensuring zero downtime and seamless operations.</li>
-        <li>Directed 3,600+ LMS integrations via course material APIs, increasing adoption rates and reducing student costs by 18%.</li>
-        <li>Redesigned EDI workflows using automated validation tools, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-title">IT Data Project Manager</div>
-      <div class="job-company">LY Berditchev Co</div>
-      <div class="job-dates">Feb 2022 - Dec 2022, Ridgefield, NJ</div>
-      <ul class="job-bullets">
-        <li>Established Agile project management frameworks to support business growth at a top 100 Amazon seller.</li>
-        <li>Built SQL-based ETL pipelines using BigQuery to automate reporting, reducing manual analysis time by 40%.</li>
-        <li>Created Power BI dashboards to track KPIs, enabling faster executive decision-making.</li>
-        <li>Managed inventory API integrations, reducing out-of-stock errors and manual updates by 45%.</li>
-        <li>Scaled Agile PM frameworks to enable bi-weekly feature releases.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-title">Project Manager</div>
-      <div class="job-company">Aucera (formerly DialAmerica)</div>
-      <div class="job-dates">Apr 2019 - Mar 2022, Mahwah, NJ</div>
-      <ul class="job-bullets">
-        <li>Served as primary liaison with Fortune 500 clients for marketing campaign success.</li>
-        <li>Led Agile development of compliance tools (GLBA, PCI, HIPAA) ensuring regulatory adherence.</li>
-        <li>Launched AI-powered IVR system improving activation rates by 30% through predictive call routing.</li>
-        <li>Used SQL for real-time marketing insights, improving customer acquisition by 22%.</li>
-        <li>Owned incident response workflows for Sev 1 & 2 issues, reducing recurrence by 35%.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education-certifications">
-    <h2>Education & Certifications</h2>
-
-    <div class="education-item">
-      <div class="education-degree">Master of Science in Data Science</div>
-      <div>New York Institute of Technology, New York, NY</div>
-      <div><em>Expected Graduation: Spring 2026</em></div>
-    </div>
-
-    <div class="education-item">
-      <div class="education-degree">Bachelor of Science, Mathematics-Physics</div>
-      <div>SUNY Fredonia, Fredonia, NY</div>
-    </div>
-
-    <div class="certifications">
-      <h3>Certifications</h3>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a senior project manager with 7+ years of proven experience driving high-impact technology and data initiatives across eCommerce, retail, and marketing sectors. I excel at leading cross-functional teams, architecting robust data systems that enable smarter decision-making, and managing projects end-to-end — from initial concept through to seamless execution.</p>
+      <p>My expertise spans large-scale API integrations, designing automated reporting pipelines using SQL and BigQuery, and developing interactive Power BI dashboards that surface key business insights. I have also successfully implemented Agile frameworks that empower rapid growth and frequent, high-quality releases.</p>
+      <p>Combining a strong foundation in project delivery with deep technical problem-solving skills, I bring a practical, results-oriented mindset to every challenge — whether optimizing operations, advancing analytics capabilities, or launching innovative tools. Currently, I am expanding my data science expertise through graduate studies, enhancing my proficiency in Python, R, and machine learning to complement my project leadership.</p>
+      <p><strong>Key Strengths:</strong></p>
       <ul>
-        <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
-        <li>Certified Scrum Master (CSM), Scrum Alliance</li>
-        <li>Project Management Professional (PMP), Project Management Institute</li>
+        <li>✔ Agile & Scrum Leadership</li>
+        <li>✔ Data Analytics & Visualization (Python, SQL, Power BI)</li>
+        <li>✔ Cloud & API Integration</li>
+        <li>✔ Project Governance & Risk Management</li>
+        <li>✔ Customer-Centric Design Thinking</li>
       </ul>
-    </div>
-  </section>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <ul class="skills-list" aria-label="Skills and Tools">
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" class="skill-icon" /> Python</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/r.svg" alt="R" class="skill-icon" /> R</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sql.svg" alt="SQL" class="skill-icon" /> SQL</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="skill-icon" /> Git & GitHub</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg" alt="Power BI" class="skill-icon" /> Power BI</li>
+      </ul>
+    </section>
+
+    <section id="work-experience" class="work-experience">
+      <h2>Work Experience</h2>
+
+      <div class="job">
+        <h3>Senior Project Manager, Follett Corporation</h3>
+        <p><em>Dec 2022 - Oct 2024, Remote</em></p>
+        <ul>
+          <li>Led global Agile teams to modernize infrastructure and legacy systems for Follett, enhancing operational efficiency and scalability.</li>
+          <li>Led an enterprise-wide Oracle POS rollout across 6,000 registers nationwide with zero downtime.</li>
+          <li>Directed 3,600+ LMS integrations via course material APIs, increasing adoption rates and reducing student costs by 18%.</li>
+          <li>Redesigned EDI workflows, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>IT Data Project Manager, LY Berditchev Co</h3>
+        <p><em>Feb 2022 - Dec 2022, Ridgefield, NJ</em></p>
+        <ul>
+          <li>Built and deployed SQL-based ETL pipelines using BigQuery, reducing manual analysis time by 40%.</li>
+          <li>Created Power BI dashboards to track KPIs including sales trends and P&L metrics.</li>
+          <li>Managed inventory API integrations across eCommerce platforms, reducing out-of-stock errors by 45%.</li>
+          <li>Established Agile PM frameworks supporting bi-weekly feature releases.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Project Manager, Aucera (formerly DialAmerica)</h3>
+        <p><em>Apr 2019 - Mar 2022, Mahwah, NJ</em></p>
+        <ul>
+          <li>Served as primary liaison with Fortune 500 clients to drive marketing campaign success.</li>
+          <li>Led Agile development of compliance tools ensuring regulatory adherence (GLBA, PCI, HIPAA).</li>
+          <li>Launched AI-powered IVR system improving activation rates by 30%.</li>
+          <li>Used SQL for real-time marketing insights, improving customer acquisition by 22%.</li>
+          <li>Owned incident response workflows, reducing recurrence by 35%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <h2>Education & Certifications</h2>
+
+      <div class="edu-item">
+        <h3>New York Institute of Technology, New York, NY</h3>
+        <p>Master of Science in Data Science (Expected Graduation: Spring 2026)</p>
+      </div>
+
+      <div class="edu-item">
+        <h3>SUNY Fredonia, Fredonia, NY</h3>
+        <p>Bachelor of Science, Mathematics-Physics</p>
+      </div>
+
+      <div class="edu-item">
+        <h3>Certifications</h3>
+        <ul>
+          <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
+          <li>Certified Scrum Master (CSM), Scrum Alliance</li>
+          <li>Project Management Professional (PMP), Project Management Institute</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, please fill out the form below or email me directly at <a href="mailto:kale2861@gmail.com">kale2861@gmail.com</a>.</p>
+      <form action="https://formspree.io/f/mrbkvpde" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="_replyto" required />
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Sena Kaledzi</p>
+  </footer>
 
   <script>
-    const toggleBtn = document.getElementById('toggleNightMode');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('night-mode');
-      if(document.body.classList.contains('night-mode')) {
-        toggleBtn.textContent = '☀️ Light Mode';
-      } else {
-        toggleBtn.textContent = '🌙 Night Mode';
-      }
-    });
-  </script>
-</body>
-</html>
+    // Night mode toggle
+    const toggleBtn = document.querySelector('.toggle-night');
+    const body = document.body;
+
+    // Load saved preference
+    if(localStorage.getItem('nightMode
