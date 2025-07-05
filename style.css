@@ -57,6 +57,13 @@ body.dark-mode {
 main section { margin: 2rem 0; }
 main section h2 { border-bottom: 3px solid var(--link-color); padding-bottom: 0.3rem; margin-bottom: 1rem; }
 
+/* Skills & Tools */
+.skills-list { display: flex; gap: 3rem; flex-wrap: wrap; }
+.skills-list div { flex: 1 1 300px; }
+.skills-list ul { list-style: none; padding-left: 0; }
+.skills-list li { margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+.skill-icon { width: 22px; height: 22px; object-fit: contain; }
+
 /* Work Experience */
 .job { margin-bottom: 1.5rem; }
 .job h3 { margin: 0; }
