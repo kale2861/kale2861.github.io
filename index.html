@@ -64,3 +64,101 @@
           <li>Directed 3,600+ LMS integrations via course material APIs, increasing adoption rates and reducing student costs by 18%.</li>
           <li>Redesigned EDI workflows, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
         </ul>
+      </div>
+
+      <div class="job">
+        <h3>IT Data Project Manager, LY Berditchev Co</h3>
+        <p><em>Feb 2022 - Dec 2022, Ridgefield, NJ</em></p>
+        <ul>
+          <li>Built and deployed SQL-based ETL pipelines using BigQuery, reducing manual analysis time by 40%.</li>
+          <li>Created Power BI dashboards to track KPIs including sales trends, inventory velocity, and P&L metrics.</li>
+          <li>Managed inventory API integrations across eCommerce platforms, reducing out-of-stock errors by 45%.</li>
+          <li>Established Agile PM frameworks supporting bi-weekly feature releases.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Project Manager, Aucera (formerly DialAmerica)</h3>
+        <p><em>Apr 2019 - Mar 2022, Mahwah, NJ</em></p>
+        <ul>
+          <li>Served as primary liaison with Fortune 500 clients to drive marketing campaign success.</li>
+          <li>Led Agile development of compliance tools (GLBA, PCI, HIPAA) ensuring regulatory adherence.</li>
+          <li>Launched AI-powered IVR system improving activation rates by 30% through predictive call routing.</li>
+          <li>Used SQL for real-time marketing insights, improving customer acquisition by 22%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education & Certifications</h2>
+      <p><strong>New York Institute of Technology</strong>, New York, NY<br>
+        Master of Science in Data Science (Expected Graduation: Spring 2026)</p>
+      <p><strong>SUNY Fredonia</strong>, Fredonia, NY<br>
+        Bachelor of Science in Mathematics-Physics</p>
+      <p><strong>Certifications:</strong><br>
+        Certified Scrum Product Owner (CSPO), Certified Scrum Master (CSM), Project Management Professional (PMP)</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Credit Card Fraud Detection</h3>
+        <p>Developed a machine learning app to detect fraudulent credit card transactions using a Random Forest classifier trained on an imbalanced dataset. Features batch CSV upload and dynamic fraud trend visualizations in a Streamlit web interface.</p>
+        <p><strong>Tools:</strong> Python, scikit-learn, Streamlit, Pandas, GitHub</p>
+        <p><a href="https://github.com/kale2861/credit-card-fraud-detection" target="_blank" rel="noopener noreferrer">github.com/kale2861/credit-card-fraud-detection</a></p>
+      </div>
+
+      <div class="project">
+        <h3>Sickle Cell Image Classifier</h3>
+        <p>Developed a binary AI image classification model using MobileNetV2 and transfer learning to detect sickle cell disease from blood smear images. Deployed as a real-time Streamlit web app with class imbalance handling and preprocessing.</p>
+        <p><strong>Tools:</strong> Python, TensorFlow/Keras, Streamlit, GitHub</p>
+        <p><a href="https://github.com/kale2861/sickle-cell-image-classifiern" target="_blank" rel="noopener noreferrer">github.com/kale2861/sickle-cell-image-classifiern</a></p>
+      </div>
+
+      <div class="project">
+        <h3>NBA Clutch Performance Dashboard</h3>
+        <p>Built an interactive Streamlit dashboard to analyze NBA player performance in the final 5 minutes of close games. Features visualizing FG%, shot logs, and player-specific statistics from live play-by-play data.</p>
+        <p><strong>Tools:</strong> Python, NBA API, Streamlit, GitHub</p>
+        <p><a href="https://github.com/kale2861/nba-clutch-dashboard" target="_blank" rel="noopener noreferrer">github.com/kale2861/nba-clutch-dashboard</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to get in touch via the form below or at <a href="mailto:kale2861@gmail.com">kale2861@gmail.com</a>.</p>
+      <form action="https://formspree.io/f/mrbkvpde" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="_replyto" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Sena Kaledzi</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    if(localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if(body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
+</body>
+</html>
