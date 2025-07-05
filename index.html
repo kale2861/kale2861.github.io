@@ -21,4 +21,229 @@
     header img.profile-pic {
       width: 140px;
       height: 140px;
-      border-ra
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    nav.social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077b5;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+    nav.social-links a img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid #0077b5;
+      padding-bottom: 6px;
+      color: #0077b5;
+    }
+    ul.skills-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul.skills-list li {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 6px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: #444;
+      font-size: 14px;
+    }
+    .skill-icon {
+      height: 20px;
+      width: auto;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .job {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #0077b5;
+    }
+    .job-company {
+      font-style: italic;
+      color: #555;
+    }
+    .job-dates {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .job-bullets {
+      margin-left: 20px;
+      list-style-type: disc;
+      color: #444;
+    }
+    .education-item {
+      margin-bottom: 15px;
+    }
+    .education-degree {
+      font-weight: 700;
+      color: #0077b5;
+    }
+    .certifications {
+      margin-top: 10px;
+    }
+    .certifications li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.jpg" alt="Sena Kaledzi" class="profile-pic" />
+    <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
+    <p>Senior Project Manager & Data Scientist</p>
+    <nav class="social-links">
+      <a href="mailto:kale2861@gmail.com">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" /> kale2861@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /> LinkedIn
+      </a>
+      <a href="https://github.com/kale2861" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" /> GitHub
+      </a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Sena Kaledzi, a results-driven senior project manager and data scientist with a passion for
+      leveraging analytics and technology to drive business growth and operational excellence.
+      With experience leading cross-functional teams and deploying machine learning solutions, I
+      bring strategic vision and hands-on expertise to every project.
+    </p>
+  </section>
+
+  <section id="skills-tools">
+    <h2>Skills & Tools</h2>
+    <ul class="skills-list">
+      <li>
+        Python
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" />
+      </li>
+      <li>
+        R
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="skill-icon" />
+      </li>
+      <li>
+        SQL
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" />
+      </li>
+      <li>
+        BigQuery
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_BigQuery_Logo.svg" alt="BigQuery" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Power BI
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.svg" alt="Power BI" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Azure DevOps
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_Azure_DevOps.svg" alt="Azure DevOps" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        JIRA
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Atlassian_Jira_logo.svg" alt="JIRA" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Confluence
+        <img src="https://wac-cdn.atlassian.com/assets/img/favicons/confluence/favicon.png" alt="Confluence" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Asana
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Asana_logo.svg" alt="Asana" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Monday.com
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Monday.com_Logo.svg" alt="Monday.com" class="skill-icon" style="height:20px;" />
+      </li>
+      <li>
+        Git & GitHub
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon" />
+      </li>
+    </ul>
+  </section>
+
+  <section id="work-experience">
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-title">Senior Project Manager</div>
+      <div class="job-company">Follett Corporation</div>
+      <div class="job-dates">Dec 2022 - Oct 2024, Remote</div>
+      <ul class="job-bullets">
+        <li>Led global Agile teams to modernize infrastructure and legacy systems for Follett, enhancing operational efficiency and scalability.</li>
+        <li>Led an enterprise-wide Oracle POS rollout across 6,000 registers nationwide, ensuring zero downtime and seamless operations.</li>
+        <li>Directed 3,600+ LMS integrations via course material APIs, increasing adoption rates and reducing student costs by 18%.</li>
+        <li>Redesigned EDI workflows using automated validation tools, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">IT Data Project Manager</div>
+      <div class="job-company">LY Berditchev Co</div>
+      <div class="job-dates">Feb 2022 - Dec 2022, Ridgefield, NJ</div>
+      <ul class="job-bullets">
+        <li>Established Agile project management frameworks to support business growth at a top 100 Amazon seller.</li>
+        <li>Built SQL-based ETL pipelines using BigQuery to automate reporting, reducing manual analysis time by 40%.</li>
+        <li>Created Power BI dashboards to track KPIs, enabling faster executive decision-making.</li>
+        <li>Managed inventory API integrations, reducing out-of-stock errors and manual updates by 45%.</li>
+        <li>Scaled Agile PM frameworks to enable bi-weekly feature releases.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Project Manager</div>
+      <div class="job-company">Aucera (formerly DialAmerica)</div>
+      <div class="job-dates">Apr 2019 - Mar 2022, Mahwah, NJ</div>
+      <ul class="job-bullets">
+        <li>Served as primary liaison with Fortune 500 clients for marketing campaign success.</li>
+        <li>Led Agile development of compliance tools (GLBA, PCI, HIPAA) ensuring regulatory adherence.</li>
+        <li>Launched AI-powered IVR system improving activation rates by 30% through predictive call routing.</li>
+        <li>Used SQL for real-time marketing insights, improving customer acquisition by 22%.</li>
+        <li>Owned incident response workflows for Sev 1 & 2 issues, reducing recurrence by 35%.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education-certifications">
+    <h2>Education & Certifications</h2>
+
+    <div class="education-item">
+      <div class="education-degree">Master of Science in Data Science</div>
+      <div>New York Institute of Technology, New York, NY</div>
+      <div><em>Expected Graduation: Spring 2026</em></div>
+    </div>
+
+    <div class="education-item">
+      <div class="education-degree">Bachelor of Science, Mathematics-Physics</div>
+      <div>SUNY Fredonia, Fredonia, NY</div>
+    </div>
+
+    <div class="certifications">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
+        <li>Certified Scrum Master (CSM), Scrum Allian
