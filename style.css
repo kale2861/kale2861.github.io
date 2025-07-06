@@ -51,7 +51,12 @@ body.dark-mode {
 .social-links a {
   display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 1rem; color: var(--link-color);
 }
-.social-links .icon { width: 24px; height: 24px; }
+.social-links .icon,
+.social-links img {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+}
 
 /* Toggle button */
 .toggle-theme {
@@ -75,7 +80,13 @@ main section h2 {
   display: flex; align-items: center; background: var(--header-footer-bg);
   padding: 6px 10px; border-radius: 6px; font-weight: 600; font-size: 0.95rem;
 }
-.skills-list .skill-icon { width: 24px; height: 24px; margin-right: 6px; }
+.skills-list .skill-icon,
+.skills-list img {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
 
 /* Work Experience */
 .job { margin-bottom: 1.5rem; }
@@ -105,23 +116,4 @@ button:hover { background: #005582; }
   background: var(--header-footer-bg); color: var(--subtitle-color);
   text-align: center; padding: 1rem 0; border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
-}
-
-/* Fix for icon and logo sizing */
-.icon,
-.skill-icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-.skills-list img {
-  max-width: 24px;
-  height: auto;
-}
-.social-links img {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 6px;
 }
