@@ -1,65 +1,58 @@
+/* Reset & base */
+* { box-sizing: border-box; }
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 2rem;
-  background: #ffffff;
-  color: #000000;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
   transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+a { color: var(--link-color); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
 
-h1 {
-  margin: 0;
-}
+.container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
 
-h2 {
-  margin-top: 2rem;
-  border-bottom: 2px solid #007acc;
-  padding-bottom: 0.3rem;
+/* Variables for light/dark mode */
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+  --link-color: #007acc;
+  --header-footer-bg: #fafafa;
+  --border-color: #ddd;
+  --subtitle-color: #666;
 }
-
-ul.skills {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-ul.skills li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: bold;
-}
-
-ul.skills img {
-  width: 24px;
-  height: 24px;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-#toggle-dark {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-top: 0.5rem;
-}
-
-/* Dark mode styles */
 body.dark-mode {
-  background: #121212;
-  color: #eeeeee;
+  --bg-color: #121212;
+  --text-color: #eee;
+  --link-color: #4dabf7;
+  --header-footer-bg: #1f1f1f;
+  --border-color: #444;
+  --subtitle-color: #aaa;
 }
 
-body.dark-mode a {
-  color: #4dabf7;
+/* Header */
+.site-header {
+  background: var(--header-footer-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
 }
+.header-content { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.logo img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+.header-text { flex-grow: 1; }
+.header-text h1 { margin: 0 0 0.2rem 0; }
+.subtitle { margin: 0; color: var(--subtitle-color); font-weight: 500; }
+.social-links a { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 1rem; color: var(--link-color); }
+.social-links .icon { width: 20px; height: 20px; }
+
+/* Toggle button */
+.toggle-theme {
+  background: none; border: none; font-size: 1.6rem; cursor: pointer;
+  color: var(--text-color); transition: color 0.3s ease;
+}
+
+/* Sections */
+main section { margin: 2rem 0; }
+main section h2 { border-bottom: 3px solid var(--link-color);
