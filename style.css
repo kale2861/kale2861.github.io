@@ -39,13 +39,19 @@ body.dark-mode {
   border-bottom: 1px solid var(--border-color);
   padding: 1rem 0;
 }
-.header-content { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-.logo img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+.header-content {
+  display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+}
+.logo img {
+  width: 100px; height: 100px; border-radius: 50%; object-fit: cover;
+}
 .header-text { flex-grow: 1; }
 .header-text h1 { margin: 0 0 0.2rem 0; }
 .subtitle { margin: 0; color: var(--subtitle-color); font-weight: 500; }
-.social-links a { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 1rem; color: var(--link-color); }
-.social-links .icon { width: 20px; height: 20px; }
+.social-links a {
+  display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 1rem; color: var(--link-color);
+}
+.social-links .icon { width: 24px; height: 24px; }
 
 /* Toggle button */
 .toggle-theme {
@@ -55,4 +61,67 @@ body.dark-mode {
 
 /* Sections */
 main section { margin: 2rem 0; }
-main section h2 { border-bottom: 3px solid var(--link-color);
+main section h2 {
+  border-bottom: 3px solid var(--link-color);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+/* Skills & Tools */
+.skills-list {
+  display: flex; flex-wrap: wrap; list-style: none; gap: 15px; padding: 0;
+}
+.skills-list li {
+  display: flex; align-items: center; background: var(--header-footer-bg);
+  padding: 6px 10px; border-radius: 6px; font-weight: 600; font-size: 0.95rem;
+}
+.skills-list .skill-icon { width: 24px; height: 24px; margin-right: 6px; }
+
+/* Work Experience */
+.job { margin-bottom: 1.5rem; }
+.job h3 { margin: 0; }
+.job p { margin: 0.2rem 0 0.5rem; }
+.job ul { margin: 0; padding-left: 1.2rem; }
+
+/* Contact form */
+form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+label { font-weight: bold; }
+input[type="text"], input[type="email"], textarea {
+  padding: 8px; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; resize: vertical;
+}
+button {
+  max-width: 150px; background: var(--link-color); color: white; border: none;
+  padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.3s;
+}
+button:hover { background: #005582; }
+
+/* Footer */
+.site-footer {
+  background: var(--header-footer-bg); color: var(--subtitle-color);
+  text-align: center; padding: 1rem 0; border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+/* Fix for icon and logo sizing */
+.icon,
+.skill-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.skills-list img {
+  max-width: 24px;
+  height: auto;
+}
+.social-links img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
