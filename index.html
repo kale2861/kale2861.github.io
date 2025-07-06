@@ -1,90 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sena Kaledzi | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
-    <p>Senior Project Manager | Data Science Graduate Student</p>
-    <button id="toggle-dark" aria-label="Toggle dark mode">🌙</button>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="profile.jpg" alt="Sena Kaledzi" />
+      </div>
+      <div class="header-text">
+        <h1>Sena Kaledzi, PMP, CSM, CSPO</h1>
+        <p class="subtitle">Senior Project Manager & Data Science Graduate Student</p>
+        <nav class="social-links">
+          <a href="mailto:kale2861@gmail.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" class="icon" />
+            kale2861@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/senakaledzi/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon" />
+            LinkedIn
+          </a>
+          <a href="https://github.com/kale2861" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon" />
+            GitHub
+          </a>
+        </nav>
+      </div>
+      <button class="toggle-theme" aria-label="Toggle dark mode">🌙</button>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Experienced project manager with 7+ years leading complex projects at the intersection of IT and operations. Currently pursuing an MS in Data Science to blend technical expertise with business strategy. Proven track record delivering results through Agile methodologies, data-driven decision-making, and cross-functional leadership.</p>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a senior project manager with 7+ years of proven experience driving high-impact technology and data initiatives across eCommerce, retail, and marketing sectors. I excel at leading cross-functional teams, architecting robust data systems that enable smarter decision-making, and managing projects end-to-end — from initial concept through to seamless execution.</p>
+      <p>My expertise spans large-scale API integrations, designing automated reporting pipelines using SQL and BigQuery, and developing interactive Power BI dashboards that surface key business insights. I have also successfully implemented Agile frameworks that empower rapid growth and frequent, high-quality releases.</p>
+      <p>Combining a strong foundation in project delivery with deep technical problem-solving skills, I bring a practical, results-oriented mindset to every challenge — whether optimizing operations, advancing analytics capabilities, or launching innovative tools. Currently, I am expanding my data science expertise through graduate studies, enhancing my proficiency in Python, R, and machine learning to complement my project leadership.</p>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python">Python</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt="JavaScript">JavaScript</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sqlite.svg" alt="SQL">SQL</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/git.svg" alt="Git">Git</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt="Docker">Docker</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/streamlit.svg" alt="Streamlit">Streamlit</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tensorflow.svg" alt="TensorFlow">TensorFlow</li>
-      <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pandas.svg" alt="Pandas">Pandas</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <ul class="skills-list">
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" class="skill-icon" /> Python</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/r.svg" alt="R" class="skill-icon" /> R</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sqlite.svg" alt="SQL" class="skill-icon" /> SQL</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" alt="JIRA" class="skill-icon" /> JIRA</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Azure DevOps" class="skill-icon" /> Azure DevOps</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg" alt="Power BI" class="skill-icon" /> Power BI</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Work Experience</h2>
-    <h3>Follett Corporation, Senior Project Manager, Dec 2022 - Oct 2024, Remote</h3>
-    <ul>
-      <li>Led global Agile teams to modernize infrastructure and legacy systems for Follett, a leading provider of campus retail and educational technology solutions, enhancing operational efficiency and scalability.</li>
-      <li>Directed AI/ML-driven classification model initiatives that enhanced content findability across internal platforms, aligning knowledge assets with strategic business goals.</li>
-      <li>Led an enterprise-wide Oracle POS rollout across 6,000 registers nationwide, coordinating engineering, QA, and deployment teams to ensure zero downtime and seamless operations.</li>
-      <li>Directed 3,600+ LMS integrations via course material APIs across campus systems, increasing adoption rates and reducing student costs by 18%.</li>
-      <li>Redesigned EDI workflows using automated validation tools, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
-    </ul>
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <div class="job">
+        <h3>Senior Project Manager, Follett Corporation</h3>
+        <p><em>Dec 2022 - Oct 2024, Remote</em></p>
+        <ul>
+          <li>Led global Agile teams to modernize infrastructure and legacy systems for Follett, enhancing operational efficiency and scalability.</li>
+          <li>Directed AI/ML-driven classification model initiatives that enhanced content findability across internal platforms, aligning knowledge assets with strategic business goals.</li>
+          <li>Led an enterprise-wide Oracle POS rollout across 6,000 registers nationwide with zero downtime.</li>
+          <li>Directed 3,600+ LMS integrations via course material APIs, increasing adoption rates and reducing student costs by 18%.</li>
+          <li>Redesigned EDI workflows, cutting client onboarding time by 25% and improving partner data sync reliability.</li>
+        </ul>
+      </div>
 
-    <h3>LY Berditchev Co, IT Data Project Manager, Feb 2022 - Dec 2022, Ridgefield, NJ</h3>
-    <ul>
-      <li>Joined LY Berditchev Co. as an early data team hire at this fast-growing startup, establishing Agile project management frameworks to support business growth at a top 100 Amazon seller.</li>
-      <li>Built and deployed SQL-based ETL pipelines using BigQuery to automate reporting across Amazon, Walmart, and Shopify channels, reducing manual analysis time by 40%.</li>
-      <li>Conducted gap analysis of knowledge assets across business units and recommended AI-powered enhancements to improve knowledge flow and reduce time to insight.</li>
-      <li>Created Power BI dashboards to track KPIs including sales trends, inventory velocity, and P&L metrics, enabling faster executive decision-making.</li>
-      <li>Managed inventory API integrations across eCommerce platforms, reducing out-of-stock errors and manual updates by 45%.</li>
-    </ul>
+      <div class="job">
+        <h3>IT Data Project Manager, LY Berditchev Co</h3>
+        <p><em>Feb 2022 - Dec 2022, Ridgefield, NJ</em></p>
+        <ul>
+          <li>Built and deployed SQL-based ETL pipelines using BigQuery, reducing manual analysis time by 40%.</li>
+          <li>Created Power BI dashboards to track KPIs including sales trends, inventory velocity, and P&L metrics.</li>
+          <li>Managed inventory API integrations across eCommerce platforms, reducing out-of-stock errors by 45%.</li>
+          <li>Established Agile PM frameworks supporting bi-weekly feature releases.</li>
+        </ul>
+      </div>
 
-    <h3>Aucera (formerly DialAmerica), Project Manager, Apr 2019 - Mar 2022, Mahwah, NJ</h3>
-    <ul>
-      <li>Served as the primary liaison with Fortune 500 clients to drive business success across marketing campaigns at Aucera, one of the largest privately held contact center companies in the US.</li>
-      <li>Led Agile development of compliance tools (GLBA, PCI, HIPAA), ensuring regulatory adherence across all call scripts and reporting interfaces.</li>
-      <li>Launched an AI-powered IVR system integrated with customer databases, improving activation rates by 30% through predictive call routing.</li>
-      <li>Used SQL for real-time marketing insights, driving campaign optimizations and improving customer acquisition by 22%.</li>
-      <li>Owned incident response workflows for Sev 1 & 2 issues, leading RCA reviews and reducing recurrence by 35%.</li>
-    </ul>
-  </section>
+      <div class="job">
+        <h3>Project Manager, Aucera (formerly DialAmerica)</h3>
+        <p><em>Apr 2019 - Mar 2022, Mahwah, NJ</em></p>
+        <ul>
+          <li>Served as the primary liaison with Fortune 500 clients to drive business success across marketing campaigns.</li>
+          <li>Led Agile development of compliance tools (GLBA, PCI, HIPAA), ensuring regulatory adherence across all call scripts and reporting interfaces.</li>
+          <li>Launched an AI-powered IVR system integrated with customer databases, improving activation rates by 30%.</li>
+          <li>Used SQL for real-time marketing insights, driving campaign optimizations and improving customer acquisition by 22%.</li>
+          <li>Owned incident response workflows for Sev 1 & 2 issues, leading RCA reviews and reducing recurrence by 35%.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section>
-    <h2>Education & Certifications</h2>
-    <p>New York Institute of Technology, New York, NY<br>Master of Science in Data Science (Expected Graduation: Spring 2026)</p>
-    <p>SUNY Fredonia, Fredonia, NY<br>Bachelor of Science, Mathematics-Physics</p>
-    <ul>
-      <li>Certified Scrum Product Owner (CSPO), Scrum Alliance</li>
-      <li>Certified Scrum Master (CSM), Scrum Alliance</li>
-      <li>Project Management Professional (PMP), Project Management Institute</li>
-    </ul>
-  </section>
+    <section id="education">
+      <h2>Education & Certifications</h2>
+      <p>Master of Science in Data Science, New York Institute of Technology (Expected: Spring 2026)<br>
+      Bachelor of Science in Mathematics-Physics, SUNY Fredonia<br>
+      Certified Scrum Product Owner (CSPO), Certified Scrum Master (CSM), PMP.</p>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>Credit Card Fraud Detection - <a href="https://github.com/kale2861/credit-card-fraud-detection">GitHub</a></li>
-      <li>Sickle Cell Image Classifier - <a href="https://github.com/kale2861/sickle-cell-image-classifier">GitHub</a></li>
-      <li>NBA Clutch Performance Dashboard - <a href="https://github.com/kale2861/nba-clutch-dashboard">GitHub</a></li>
-    </ul>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to get in touch via the form below or at <a href="mailto:kale2861@gmail.com">kale2861@gmail.com</a>.</p>
+      <form action="https://formspree.io/f/mrbkvpde" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="_replyto" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Sena Kaledzi</p>
+  </footer>
 
   <script>
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+    if(localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
     });
   </script>
 </body>
